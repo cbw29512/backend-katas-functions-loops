@@ -59,11 +59,14 @@ print(factorial(4))
 
 
 def fibonacci(n):
-    if (n < 2):
+    if n <= 0:
+        return 'Use a bigger number'
+    elif n == 1:
         return 0
-    if (n <= 3):
+    elif n == 2:
         return 1
-    return add(fibonacci(n - 1), fibonacci(n - 2))
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 print(fibonacci(8))
